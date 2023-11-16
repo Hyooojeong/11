@@ -5,23 +5,21 @@
 
 int main (void)
 {
-	int i = 0;
-	int grade[5];
-	int average = 0;
+	char *pc;
+	int *pi;
+	double *pd;
 	
-	for (i=0; i<5; i++)
-	{
-		printf("input value [%i] = ", i);
-		scanf("%d", &grade[i]);
-    }
-    
-    for (i=0; i<5; i++)
-    {	
-		printf("grade[%i] = %i\n ", i, *(grade+i));
-		average = average + *(grade+i);
-	}
+	pc = (char*)10000;
+	pi = (int*)10000;
+	pd = (double*)10000;
 	
-	printf ("average = %i\n", average/5);
+	printf ("증가 전 : pc = %p, pi = %p, pd = %p\n", pc, pi, pd);
+	
+	pc++;
+	pi++;
+	pd++;
+	
+	printf("증가 후 : pc = %p, pi = %p, pd = %p\n", pc, pi, pd);
 	
 	system ("PAUSE");
 	return 0;
